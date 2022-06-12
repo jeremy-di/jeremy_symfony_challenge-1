@@ -152,6 +152,18 @@ body {
     border: solid 1px rgb(225, 173, 30);
 }
 
+/* Page PROFILE */
+
+#profile h1 {
+text-align: center;
+margin-bottom: 2em;
+}
+
+#profile p {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
 /* FOOTER */
 
 #pdp {
@@ -161,7 +173,17 @@ body {
 
 #pdp p {
     color: #fff;
-    text-align: center;
+    text-align: end;
+    animation: defilement-rtl 15s infinite linear;
+}
+
+@keyframes defilement-rtl {
+    from {
+        transform: translate3d(0,0,0);
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+    }
 }
 
 
