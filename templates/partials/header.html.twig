@@ -1,0 +1,21 @@
+<header>
+    <div class="toggle">
+        <i class="fa-solid fa-bars ouvrir"></i>
+        <i class="fa-solid fa-xmark fermer"></i>
+    </div>
+    <div id="menu">
+        <ul>
+            <a href="{{ path('app_home') }}"><i class="fa-solid fa-microchip headerLogo"></i></a>
+            {% if app.user %}
+            <li><a href="{{ path('app_logout') }}">Se deconnecter</a></li>
+            <li><a href="">Mon profil</a></li>
+            {% else %}
+            <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+            <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
+            {% endif %}
+            {% if is_granted('ROLE_ADMIN') %}
+            <li><a href="{{ path('app_admin_menu') }}">Menu administrateur</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</header>

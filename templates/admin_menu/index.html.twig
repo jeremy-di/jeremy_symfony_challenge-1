@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminMenuController!{% endblock %}
+
+{% block body %}
+<div id="adminMenu">
+    <h1>Menu administrateur</h1>
+    <p><span class="warning">Attention !!</span> Ce menu est reservé au personnel autorisé</p>
+</div>
+<div id="adminConsole">
+    <h2>Gestion des utilisateurs</h2>
+    <ul>
+        <li><a href="{{ path('app_user_new') }}">Ajouter un nouvel utilisateur</a></li>
+        <li><a href="{{ path('app_user_index') }}">Liste des utilisateurs enregistrés</a></li>
+    </ul>
+    <h2>Gestion des articles</h2>
+    <p>Section en cours de developpement</p>
+</div>
+{% endblock %}

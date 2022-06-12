@@ -1,0 +1,7 @@
+<footer id="pdp">
+    {% if app.user %}
+    <p>Vous êtes connecté(e) en tant que : "{{ app.user.login }}"</p>
+    {% else %}
+    <p>Vous n'êtes pas connecté</p>
+    {% endif %}
+</footer>
